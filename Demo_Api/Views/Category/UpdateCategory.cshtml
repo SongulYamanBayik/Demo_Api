@@ -1,0 +1,21 @@
+﻿@model CategortyResponseModel
+
+@{ Layout = null; }
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<br />
+<div class="container">
+    <form method="post">
+        <input type="hidden" asp-for="ID" />
+        <label>Kategori Adı</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+        <label>Kategori Açıklaması</label>
+        <input type="text" asp-for="Description" class="form-control" />
+        <br />
+        <label>Kategori Durumu</label>
+        <input type="text" asp-for="Status" class="form-control" />
+        <br />
+        <button class="btn btn-outline-info">Kategoriyi Güncelle</button>
+    </form>
+</div>

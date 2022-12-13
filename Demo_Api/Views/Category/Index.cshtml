@@ -1,0 +1,30 @@
+﻿@model List<CategortyResponseModel>
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Desc.</th>
+            <th>Status</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Status</td>
+                <td><a href="/Category/DeleteCategory/@item.ID" class="btn btn-outline-danger">Sil</a></td>
+                <td><a href="#" class="btn btn-outline-success">Güncelle</a></td>
+            </tr>
+         }
+    </table>
+    <br />
+    <a href="/Category/AddCategory/" class="btn btn-outline-primary">Yeni Kategori Girişi</a>
+</div>
